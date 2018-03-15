@@ -3,7 +3,7 @@ GIT_VER := $(shell git describe --tags)
 .PHONY: packages clean
 
 consul-kv-dashboard: dashboard.go bindata.go
-	stringer -type=Status
+	# stringer -type=Status
 	go build
 
 bindata.go: assets/index.html assets/scripts/dashboard.js assets/css/style.css
